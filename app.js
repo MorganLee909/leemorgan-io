@@ -19,10 +19,14 @@ let mongooseOptions = {
 };
 
 let esbuildOptions = {
-    entryPoints: ["./views/landing/js/landing.js"],
+    entryPoints: [
+        "./views/landing/js/landing.js",
+        "./views/landing/css/landing.css"
+    ],
     bundle: true,
     minify: false,
     outdir: "./views/bundles/",
+    outbase: "./views/",
     sourcemap: true
 };
 

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Lee Morgan</title>
-        <link rel="stylesheet" href="/landing/landing.css">
+        <link rel="stylesheet" href="/bundles/landing/css/landing.css">
         <link rel="icon" type="img/ico" href="images/favicon.ico">
     </head>
     <body>
@@ -49,6 +49,6 @@
 
         <div id="projects" class="page" style="display:none"></div>
 
-        <script src="/bundles/landing.js"></script>
+        <script src="/bundles/landing/js/landing.js"></script>
     </body>
 </html>
