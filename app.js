@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const compression = require("compression");
 const bodyParser = require("body-parser");
 const fileUpload = require("express-fileupload");
+const esbuild = require("esbuild");
 const https = require("https");
 const fs = require("fs");
 
@@ -15,6 +16,14 @@ app.use(express.static(`${__dirname}/views`));
 let mongooseOptions = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+};
+
+let esbuildOptions = {
+    entryPoints: ["./views/landing/js/landing.js"],
+    bundle: true,
+    minify: false,
+    outdir: "./views/bundles/",
+    sourcemap: true
 };
 
 let httpsServer = {};
@@ -35,9 +44,13 @@ if(process.env.NODE_ENV === "production"){
     mongooseOptions.auth = {authSource: "admin"};
     mongooseOptions.user = "website";
     mongooseOptions.pass = process.env.MONGODB_PASS;
+
+    esbuildOptions.minify = true;
+    esbuildOptions.sourcemap = false;
 }
 
 mongoose.connect("mongodb://127.0.0.1:27017/leemorgan");
+esbuild.buildSync(esbuildOptions);
 
 app.use(compression());
 app.use(express.urlencoded({extended: true}));
