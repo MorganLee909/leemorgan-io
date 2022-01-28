@@ -8,7 +8,8 @@ module.exports = {
         if(!this.populated){
             document.getElementById("menuButton").onclick = ()=>{this.rotate("top")};
             document.getElementById("rightButton").onclick = ()=>{this.rotate("right")};
-            document.getElementById("leftButton").onclick = ()=>{this.rotate("left")};
+
+            document.getElementById("projectsOpen").onclick = ()=>{controller.changePage("projects")};
 
             let i = 1;
             let skills = document.querySelectorAll(".skill");
@@ -61,5 +62,5 @@ module.exports = {
         }else if(this.leftOpen){
             mainContainer.style.transform = "rotateY(-15deg)";
         }
-    }   
+    }
 }

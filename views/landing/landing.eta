@@ -9,25 +9,21 @@
     <body>
         <div id="main">
             <header>
-                <button>About Me</button>
+                <button id="projectsOpen" class="headerButton">Projects</button>
 
-                <button>Projects</button>
+                <button class="headerButton">Blog</button>
 
-                <button>Blog</button>
+                <button class="headerButton">Gallery</button>
 
-                <button>Gallery</button>
+                <button class="headerButton">Learn</button>
 
-                <button>Learn</button>
-
-                <button>Currency</button>
+                <button class="headerButton">Currency</button>
             </header>
 
             <div id="mainContainer">
                 <button id="menuButton">Menu</button>
 
-                <button id="rightButton">Right</button>
-
-                <button id="leftButton">Left</button>
+                <button id="rightButton">Links</button>
 
                 <h1>Lee Morgan</h1>
             
@@ -47,7 +43,9 @@
             </div>
         </div>
 
-        <div id="projects" class="page" style="display:none"></div>
+        <div id="projects" class="page" style="display:none">
+            <h1>Projects</h1>
+        </div>
 
         <script src="/bundles/landing/js/landing.js"></script>
     </body>

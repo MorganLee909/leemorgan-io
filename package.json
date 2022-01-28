@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js --ignore ./views/bundles/"
+    "dev": "nodemon app.js --ext js,css,eta --ignore ./views/bundles/"
   },
   "repository": {
     "type": "git",
