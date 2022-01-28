@@ -44,12 +44,7 @@
         </div>
 
         <div id="projects" class="page" style="display:none">
-            <div id="projectsBack" class="backButton">
-                <svg width="30" height="30" stroke-width="3" viewBox="0 0 24 24" fill="none">
-                    <path d="M18.5 12H6M6 12L12 6M6 12L12 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <p>Back</p>
-            </div>
+            <%~ includeFile("./landingBackBtn.eta") %>
 
             <a class="project" href="https://thesubline.com">
                 <h2>The Subline</h2>
@@ -75,6 +70,15 @@
                 <h2>Blacklist.aero</h2>
                 <img src="/images/blacklist.webp" alt="Blacklist.aero">
             </a>
+        </div>
+
+        <div id="blog" class="page" style="display:none">
+            <%~ includeFile("./landingBackBtn.eta") %>
+
+            <%=blogs%>
+            <% for(let i = 0; i < blogs.length; i++){ %>
+                <a class="blog" href=""></a>
+            <% } %>
         </div>
 
         <script src="/bundles/landing/js/landing.js"></script>
