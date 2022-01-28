@@ -4,4 +4,5 @@ module.exports = (app)=>{
     //HOME
     app.get("/", home.landing);
     app.get("/sudoku", home.sudoku);
+    app.get("/birthday", home.birthday);
 }
