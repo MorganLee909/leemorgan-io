@@ -23,11 +23,11 @@
             </header>
 
             <div id="mainContainer">
-                <button id="menuButton" onclick="rotate('top')">Menu</button>
+                <button id="menuButton">Menu</button>
 
-                <button id="otherButton" onclick="rotate('right')">Right</button>
+                <button id="rightButton">Right</button>
 
-                <button id="leftButton" onclick="rotate('left')">Left</button>
+                <button id="leftButton">Left</button>
 
                 <h1>Lee Morgan</h1>
             
@@ -46,5 +46,9 @@
                 </div>
             </div>
         </div>
+
+        <div id="projects" class="page" style="display:none"></div>
+
+        <script src="/bundles/landing.js"></script>
     </body>
 </html>
