@@ -1,0 +1,102 @@
+*{margin:0;padding:0;}
+
+#main{
+    perspective: 2000px;
+    background: rgb(196, 198, 192);
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#mainContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom right,rgb(23, 0, 25), rgb(0, 28, 30));
+    transform-origin: bottom;
+    transition: all 0.5s;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 25px 0;
+    position: absolute;
+    z-index: -1;
+}
+
+    header > *{
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        margin: 0 20px;
+    }
+
+#mainContainer h1{
+    color: rgb(0, 62, 70);
+    margin: auto 0 0 0;
+    font-size: 75px;
+    position: relative;
+}
+
+#menuButton{
+    width: 100px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    margin: 35px auto 0 auto;
+}
+
+#otherButton{
+    width: 100px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    margin: 35px auto 0 auto;
+    position: absolute;
+    right: 35px;
+    top: 50%;
+}
+
+#leftButton{
+    width: 100px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    margin: 35px auto 0 auto;
+    position: absolute;
+    left: 35px;
+    top: 50%;
+}
+
+#centerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 auto 0;
+    color: rgb(83, 0, 193);
+    font-size: 55px;
+    font-weight: bold;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    height: 50%;
+    width: 50%;
+}
+
+.skill{
+    opacity: 0;
+    transition: opacity 2s;
+    position: absolute;
+}

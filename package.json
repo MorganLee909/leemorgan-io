@@ -1,0 +1,28 @@
+{
+  "name": "leemorgan-io",
+  "version": "1.0.0",
+  "description": "Personal website of Lee Morgan",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MorganLee909/leemorgan-io.git"
+  },
+  "author": "Lee Morgan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MorganLee909/leemorgan-io/issues"
+  },
+  "homepage": "https://github.com/MorganLee909/leemorgan-io#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "compression": "^1.7.4",
+    "esbuild": "^0.14.14",
+    "eta": "^1.12.3",
+    "express": "^4.17.2",
+    "express-fileupload": "^1.2.1",
+    "mongoose": "^6.1.8"
+  }
+}

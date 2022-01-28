@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Lee Morgan</title>
+        <link rel="stylesheet" href="/landing/landing.css">
+        <link rel="icon" type="img/ico" href="images/favicon.ico">
+    </head>
+    <body>
+        <div id="main">
+            <header>
+                <button>About Me</button>
+
+                <button>Projects</button>
+
+                <button>Blog</button>
+
+                <button>Gallery</button>
+
+                <button>Learn</button>
+
+                <button>Currency</button>
+            </header>
+
+            <div id="mainContainer">
+                <button id="menuButton" onclick="rotate('top')">Menu</button>
+
+                <button id="otherButton" onclick="rotate('right')">Right</button>
+
+                <button id="leftButton" onclick="rotate('left')">Left</button>
+
+                <h1>Lee Morgan</h1>
+            
+                <div id="centerContainer">
+                    <p class="skill" style="opacity:1">JavaScript</p>
+
+                    <p class="skill">HTML</p>
+
+                    <p class="skill">CSS</p>
+
+                    <p class="skill">Node.js</p>
+
+                    <p class="skill">MongoDB</p>
+
+                    <p class="skill">Linux Server Management</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
