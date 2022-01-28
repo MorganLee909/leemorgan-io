@@ -75,11 +75,6 @@
                 <h2>Blacklist.aero</h2>
                 <img src="/images/blacklist.webp" alt="Blacklist.aero">
             </a>
-
-            <a class="project" href="/covid">
-                <h2>Covid-19 Data</h2>
-                <img src="/images/covid.webp" alt="Covid-19 Data">
-            </a>
         </div>
 
         <script src="/bundles/landing/js/landing.js"></script>

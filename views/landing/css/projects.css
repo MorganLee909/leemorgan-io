@@ -23,6 +23,10 @@
     cursor: pointer;
 }
 
+.project:hover{
+    box-shadow: 0 0 2px black;
+}
+
 .project h2{
     font-size: 35px;
     padding-bottom: 15px;
