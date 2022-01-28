@@ -1,12 +1,15 @@
 #main{
     perspective: 2000px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     overflow: hidden;
     z-index: 1;
     transition: transform 1s;
     transform-origin: left;
+    background: rgb(196, 198, 192);
 }
 
 .rotateMain{
@@ -32,41 +35,6 @@ header{
     position: absolute;
     z-index: -1;
 }
-
-    .headerButton{
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 18px;
-        margin: 0 20px;
-        position: relative;
-        width: 100px;
-        text-align: center;
-        border-radius: 10px;
-        overflow: hidden;
-        transition: color 0.5s;
-    }
-
-    .headerButton:hover{
-        color: white;
-    }
-
-    .headerButton::before{
-        content: "";
-        background: rgb(0, 28, 30);
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        transform: translateX(-100%);
-        transition: transform 0.5s;
-    }
-
-    .headerButton:hover::before{
-        transform: translateX(0);
-    }
 
 #mainContainer h1{
     color: rgb(0, 62, 70);

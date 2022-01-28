@@ -9,15 +9,15 @@
     <body>
         <div id="main">
             <header>
-                <button id="projectsOpen" class="headerButton">Projects</button>
+                <button id="projectsOpen" class="smallButton">Projects</button>
 
-                <button class="headerButton">Blog</button>
+                <button class="smallButton">Blog</button>
 
-                <button class="headerButton">Gallery</button>
+                <button class="smallButton">Gallery</button>
 
-                <button class="headerButton">Learn</button>
+                <button class="smallButton">Learn</button>
 
-                <button class="headerButton">Currency</button>
+                <button class="smallButton">Currency</button>
             </header>
 
             <div id="mainContainer">
@@ -44,7 +44,42 @@
         </div>
 
         <div id="projects" class="page" style="display:none">
-            <h1>Projects</h1>
+            <div id="projectsBack" class="backButton">
+                <svg width="30" height="30" stroke-width="3" viewBox="0 0 24 24" fill="none">
+                    <path d="M18.5 12H6M6 12L12 6M6 12L12 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p>Back</p>
+            </div>
+
+            <a class="project" href="https://thesubline.com">
+                <h2>The Subline</h2>
+                <img src="/images/subline.webp" alt="The Subline">
+            </a>
+
+            <a class="project" href="https://budgeteer.money">
+                <h2>Budgeteer</h2>
+                <img src="/images/budgeteer.webp" alt="Budgeteer">
+            </a>
+
+            <a class="project" href="/sudoku">
+                <h2>Sudoku Solver</h2>
+                <img src="/images/sudoku.webp" alt="Sudoku Solver">
+            </a>
+
+            <a class="project" href="/birthday">
+                <h2>Birthday Paradox</h2>
+                <img src="/images/birthday.webp" alt="Birthday Project">
+            </a>
+
+            <a class="project" href="https://blacklist.aero">
+                <h2>Blacklist.aero</h2>
+                <img src="/images/blacklist.webp" alt="Blacklist.aero">
+            </a>
+
+            <a class="project" href="/covid">
+                <h2>Covid-19 Data</h2>
+                <img src="/images/covid.webp" alt="Covid-19 Data">
+            </a>
         </div>
 
         <script src="/bundles/landing/js/landing.js"></script>

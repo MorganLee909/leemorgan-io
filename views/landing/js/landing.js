@@ -1,5 +1,5 @@
 const mainPage = require("./mainPage.js");
-
+const projectsPage = require("./projects.js");
 
 window.controller = {
     mainOpen: true,
@@ -17,6 +17,11 @@ window.controller = {
         }else{
             main.classList.remove("rotateMain");
             this.mainOpen = true;
+        }
+
+        switch(page){
+            case "main": mainPage.display(); break;
+            case "projects": projectsPage.display(); break;
         }
     }
 }
