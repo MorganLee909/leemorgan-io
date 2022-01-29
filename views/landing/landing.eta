@@ -13,11 +13,11 @@
 
                 <button class="smallButton">Blog</button>
 
-                <button class="smallButton">Gallery</button>
+                <!-- <button class="smallButton">Gallery</button>
 
                 <button class="smallButton">Learn</button>
 
-                <button class="smallButton">Currency</button>
+                <button class="smallButton">Currency</button> -->
             </header>
 
             <div id="mainContainer">
@@ -44,7 +44,7 @@
         </div>
 
         <div id="projects" class="page" style="display:none">
-            <%~ includeFile("./landingBackBtn.eta") %>
+            <%~ includeFile("../components/landingBackBtn.eta") %>
 
             <a class="project" href="https://thesubline.com">
                 <h2>The Subline</h2>
@@ -73,7 +73,7 @@
         </div>
 
         <div id="blog" class="page" style="display:none">
-            <%~ includeFile("./landingBackBtn.eta") %>
+            <%~ includeFile("../components/landingBackBtn.eta") %>
 
             <%=blogs%>
             <% for(let i = 0; i < blogs.length; i++){ %>
