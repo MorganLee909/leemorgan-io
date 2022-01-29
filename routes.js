@@ -9,4 +9,5 @@ module.exports = (app)=>{
 
     //BLOG
     app.get("/blog/new", blog.add);
+    app.post("/blog/create", blog.create);
 }
