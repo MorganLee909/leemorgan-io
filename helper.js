@@ -3,15 +3,15 @@ module.exports = {
         let fileData = [];
 
         for(let i = 0; i < files.length; i++){
-            let fileType = files[i].split(".");
+            let fileType = files[i].name.split(".");
             fileType = fileType[fileType.length-1];
 
             let file = {
                 name: files[i].name,
-                link: `/${folder}/${this.fileId(25)}.${fileType}`,
+                link: `/${folder}/${this.fileId(25)}.${fileType}`
             };
 
-            files[i].mv(`${__dirname}/..${file.link}`);
+            files[i].mv(`${__dirname}${file.link}`);
 
             fileData.push(file);
         }

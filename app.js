@@ -57,8 +57,12 @@ mongoose.connect("mongodb://127.0.0.1:27017/leemorgan");
 esbuild.buildSync(esbuildOptions);
 
 app.use(compression());
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+app.use(fileUpload({
+    limits: {fileSize: 5 * 1024 * 1024},
+}));
 
 require("./routes")(app);
 
