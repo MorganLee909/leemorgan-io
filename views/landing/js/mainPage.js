@@ -10,6 +10,7 @@ module.exports = {
             document.getElementById("rightButton").onclick = ()=>{this.rotate("right")};
 
             document.getElementById("projectsOpen").onclick = ()=>{controller.changePage("projects")};
+            document.getElementById("blogOpen").onclick = ()=>{controller.changePage("blog")};
 
             let i = 1;
             let skills = document.querySelectorAll(".skill");

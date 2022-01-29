@@ -1,5 +1,6 @@
 const mainPage = require("./mainPage.js");
 const projectsPage = require("./projects.js");
+const blogPage = require("./blog.js");
 
 window.controller = {
     mainOpen: true,
@@ -22,9 +23,14 @@ window.controller = {
         switch(page){
             case "main": mainPage.display(); break;
             case "projects": projectsPage.display(); break;
+            case "blog": blogPage.display(); break;
         }
     }
 }
 
+let backs = document.querySelectorAll(".backButton");
+for(let i = 0; i < backs.length; i++){
+    backs[i].onclick = ()=>{controller.changePage("main")};
+}
 
 mainPage.display();

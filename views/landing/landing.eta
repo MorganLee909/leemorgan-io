@@ -11,13 +11,13 @@
             <header>
                 <button id="projectsOpen" class="smallButton">Projects</button>
 
-                <button class="smallButton">Blog</button>
+                <button id="blogOpen" class="smallButton">Blog</button>
 
-                <!-- <button class="smallButton">Gallery</button>
+                <!-- <button class="smallButton">Gallery</button> -->
 
-                <button class="smallButton">Learn</button>
+                <!-- <button class="smallButton">Learn</button> -->
 
-                <button class="smallButton">Currency</button> -->
+                <!-- <button class="smallButton">Currency</button> -->
             </header>
 
             <div id="mainContainer">
@@ -75,9 +75,12 @@
         <div id="blog" class="page" style="display:none">
             <%~ includeFile("../components/landingBackBtn.eta") %>
 
-            <%=blogs%>
-            <% for(let i = 0; i < blogs.length; i++){ %>
-                <a class="blog" href=""></a>
+            <% for(let i = 0; i < it.blogs.length; i++){ %>
+                <a class="blog" href="/blog/<%=it.blogs[i]._id%>">
+                    <h3><%=it.blogs[i].title%></h3>
+
+                    <img src="<%=it.blogs[i].thumbnail.link%>" alt="<%=it.blogs[i].thumbnail.name%>">
+                </a>
             <% } %>
         </div>
 
