@@ -49,7 +49,7 @@ module.exports = {
         let blog = new Blog({
             title: req.body.title,
             tags: req.body.tags.split(" "),
-            thumbnail: helper.createFiles([req.files.thumbnail], "thumbnails"),
+            thumbnail: helper.createFiles([req.files.thumbnail], "thumbnails")[0],
             article: req.body.article.split("\r\n")
         });
 

@@ -11,4 +11,7 @@ module.exports = (app)=>{
     app.get("/blog/new", blog.add);
     app.get("/blog/:id", blog.display);
     app.post("/blog/create", blog.create);
+
+    //FILES
+    app.get("/thumbnails/:file", (req, res)=>res.sendFile(`${__dirname}/thumbnails/${req.params.file}`));
 }
