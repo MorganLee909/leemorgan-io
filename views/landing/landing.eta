@@ -13,7 +13,7 @@
 
                 <button id="blogOpen" class="smallButton">Blog</button>
 
-                <!-- <button class="smallButton">Gallery</button> -->
+                <button id="galleryOpen" class="smallButton">Gallery</button>
 
                 <!-- <button class="smallButton">Learn</button> -->
 
@@ -82,6 +82,12 @@
                     <img src="<%=it.blogs[i].thumbnail.link%>" alt="<%=it.blogs[i].thumbnail.name%>">
                 </a>
             <% } %>
+        </div>
+
+        <div id="gallery" class="page" style="display:none">
+            <%~ includeFile("../components/landingBackBtn.eta") %>
+
+            <h1>Gallery</h1>
         </div>
 
         <script src="/bundles/landing/js/landing.js"></script>

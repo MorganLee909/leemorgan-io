@@ -11,6 +11,7 @@ module.exports = {
 
             document.getElementById("projectsOpen").onclick = ()=>{controller.changePage("projects")};
             document.getElementById("blogOpen").onclick = ()=>{controller.changePage("blog")};
+            document.getElementById("galleryOpen").onclick = ()=>{controller.changePage("gallery")};
 
             let i = 1;
             let skills = document.querySelectorAll(".skill");

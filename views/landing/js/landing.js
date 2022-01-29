@@ -1,6 +1,7 @@
 const mainPage = require("./mainPage.js");
 const projectsPage = require("./projects.js");
 const blogPage = require("./blog.js");
+const galleryPage = require("./gallery.js");
 
 window.controller = {
     mainOpen: true,
@@ -24,6 +25,7 @@ window.controller = {
             case "main": mainPage.display(); break;
             case "projects": projectsPage.display(); break;
             case "blog": blogPage.display(); break;
+            case "gallery": galleryPage.display(); break;
         }
     }
 }

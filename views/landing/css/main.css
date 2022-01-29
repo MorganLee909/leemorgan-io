@@ -22,7 +22,7 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    background: linear-gradient(to bottom right,rgb(23, 0, 25), rgb(0, 28, 30));
+    background: linear-gradient(to bottom right,rgb(23, 0, 25), rgb(0, 46, 49));
     transform-origin: bottom;
     transition: all 0.5s;
 }
