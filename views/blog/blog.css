@@ -1,0 +1,22 @@
+*{margin:0;padding:0;}
+
+body{
+    background: linear-gradient(to right, rgb(23, 0, 25), rgb(0, 46, 49));
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgb(251, 255, 228);
+    padding: 35px;
+}
+
+p{
+    width: 100%;
+    margin: 15px;
+    font-size: 22px;
+    color: rgb(0, 36, 68);
+}

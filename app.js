@@ -6,9 +6,11 @@ const fileUpload = require("express-fileupload");
 const esbuild = require("esbuild");
 const https = require("https");
 const fs = require("fs");
+const eta = require("eta")
 
 let app = express();
 
+app.engine("eta", eta.renderFile);
 app.set("view engine", "eta");
 app.set("views", `${__dirname}/views`);
 app.use(express.static(`${__dirname}/views`));

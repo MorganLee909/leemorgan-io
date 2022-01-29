@@ -3,8 +3,32 @@ const Blog = require("../models/blog.js");
 const helper = require("../helper.js");
 
 module.exports = {
+    /*
+    GET: display page for creating new blog
+    */
     add: function(req, res){
         return res.render("blog/new.eta");
+    },
+
+    /*
+    GET: display a blog
+    req.params = {
+        id: Blog id
+    }
+    render: blog/blog.eta
+    data = {
+        blog: Blog
+    }
+    */
+    display: function(req, res){
+        Blog.findOne({_id: req.params.id})
+            .then((blog)=>{
+                return res.render("blog/blog.eta", {blog: blog});
+            })
+            .catch((err)=>{
+                console.error(err);
+                return res.redirect("/");
+            });
     },
 
     /*
@@ -26,7 +50,7 @@ module.exports = {
             title: req.body.title,
             tags: req.body.tags.split(" "),
             thumbnail: helper.createFiles([req.files.thumbnail], "thumbnails"),
-            article: req.body.article
+            article: req.body.article.split("\r\n")
         });
 
         blog.save()

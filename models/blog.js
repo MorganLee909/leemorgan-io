@@ -11,7 +11,7 @@ const BlogSchema = new mongoose.Schema({
         link: String,
     },
     article: {
-        type: String,
+        type: [String],
         required: true
     },
     date: {

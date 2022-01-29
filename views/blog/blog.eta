@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Lee Morgan</title>
+        <link rel="icon" type="img/ico" href="/images/favicon.ico">
+        <link rel="stylesheet" href="/blog/blog.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1><%=it.blog.title%></h1>
+
+            <h3>Lee Morgan</h3>
+
+            <h4><%=it.blog.date.toLocaleDateString("en-us")%></h4>
+
+            <% for(let i = 0; i < it.blog.article.length; i++){ %>
+                <p><%=it.blog.article[i]%></p>
+            <% } %>
+        </div>
+    </body>
+</html>

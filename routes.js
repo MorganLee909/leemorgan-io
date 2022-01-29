@@ -9,5 +9,6 @@ module.exports = (app)=>{
 
     //BLOG
     app.get("/blog/new", blog.add);
+    app.get("/blog/:id", blog.display);
     app.post("/blog/create", blog.create);
 }
