@@ -21,26 +21,43 @@
                 <!-- <button class="smallButton">Currency</button> -->
             </header>
 
+            <div id="links">
+                <a href="https://github.com/MorganLee909" class="smallButton">
+                    <img src="/images/github.webp" alt="GitHub logo">
+                    GitHub
+                </a>
+
+                <a href="https://linkedin.com/in/leemorgan.io" class="smallButton">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    LinkedIn
+                </a>
+
+                <a href="https://bitchute.com/channel/Dn8vPaD4hqD6/" class="smallButton">
+                    <img src="/images/bitchute.webp" alt="BitChute logo">
+                    BitChute
+                </a>
+
+                <a href="https://rumble.com/user/LeeMorganIO" class="smallButton">
+                    <img src="/images/rumble.webp" alt="Rumble logo">
+                    Rumble
+                </a>
+
+                <a href="https://youtube.com/channel/UCjAUvyOuOEEXFr3K2oXldRg" class="smallButton">
+                    <img src="/images/youtube.webp" alt="YouTube Logo">
+                    YouTube
+                </a>
+            </div>
+
             <div id="mainContainer">
                 <button id="menuButton">Menu</button>
 
                 <button id="rightButton">Links</button>
 
                 <h1>Lee Morgan</h1>
-            
-                <div id="centerContainer">
-                    <p class="skill" style="opacity:1">JavaScript</p>
-
-                    <p class="skill">HTML</p>
-
-                    <p class="skill">CSS</p>
-
-                    <p class="skill">Node.js</p>
-
-                    <p class="skill">MongoDB</p>
-
-                    <p class="skill">Linux Server Management</p>
-                </div>
             </div>
         </div>
 

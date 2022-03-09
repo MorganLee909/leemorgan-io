@@ -18,13 +18,14 @@
 
 #mainContainer{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100%;
     width: 100%;
     background: linear-gradient(to bottom right,rgb(23, 0, 25), rgb(0, 46, 49));
     transform-origin: bottom;
     transition: all 0.5s;
+    position: relative;
 }
 
 header{
@@ -38,9 +39,7 @@ header{
 
 #mainContainer h1{
     color: rgb(0, 62, 70);
-    margin: auto 0 0 0;
     font-size: 75px;
-    position: relative;
 }
 
 #menuButton{
@@ -50,7 +49,8 @@ header{
     cursor: pointer;
     color: white;
     font-size: 16px;
-    margin: 35px auto 0 auto;
+    position: absolute;
+    top: 15px;
 }
 
 #rightButton{
@@ -79,23 +79,22 @@ header{
     top: 50%;
 }
 
-#centerContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0 auto 0;
-    color: rgb(83, 0, 193);
-    font-size: 55px;
-    font-weight: bold;
-    box-sizing: border-box;
-    text-align: center;
-    position: relative;
-    height: 50%;
-    width: 50%;
-}
-
 .skill{
     opacity: 0;
     transition: opacity 2s;
     position: absolute;
+}
+
+#links{
+    position: absolute;
+    top: 250px;
+    right: 0;
+}
+
+#links > *{
+    margin: 15px 0;
+}
+
+#links img{
+    height: 24px;
 }

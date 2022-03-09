@@ -51,18 +51,18 @@ module.exports = {
         if(this.topOpen && this.rightOpen && this.leftOpen){
             mainContainer.style.transform = "rotateX(15deg) scale(0.95)";
         }else if(this.topOpen && this.leftOpen){
-            mainContainer.style.transform = "rotateX(15deg) rotateY(-15deg) translate(0, 35px)";
+            mainContainer.style.transform = "rotateX(15deg) rotateY(-20deg) translate(0, 35px)";
         }else if(this.topOpen && this.rightOpen){
-            mainContainer.style.transform = "rotateX(15deg) rotateY(15deg) translate(0, 35px)";
+            mainContainer.style.transform = "rotateX(15deg) rotateY(20deg) translate(0, 35px)";
         }else if(this.leftOpen && this.rightOpen){
             mainContainer.style.transformOrigin = "top";
             mainContainer.style.transform = "rotateX(-5deg) scale(0.85, 1)";
         }else if(this.topOpen){
             mainContainer.style.transform = "rotateX(15deg)";
         }else if(this.rightOpen){
-            mainContainer.style.transform = "rotateY(15deg)";
+            mainContainer.style.transform = "rotateY(20deg)";
         }else if(this.leftOpen){
-            mainContainer.style.transform = "rotateY(-15deg)";
+            mainContainer.style.transform = "rotateY(-20deg)";
         }
     }
 }
