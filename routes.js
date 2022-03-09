@@ -14,10 +14,12 @@ module.exports = (app)=>{
     app.post("/blog/create", blog.create);
 
     //GALLERY
+    app.get("/gallery/:gallery", gallery.display);
     app.get("/gallery/new", gallery.new);
 
     app.post("/gallery", gallery.create);
 
     //FILES
     app.get("/thumbnails/:file", (req, res)=>res.sendFile(`${__dirname}/thumbnails/${req.params.file}`));
+    app.get("/galleryImages/:file", (req, res)=>res.sendFile(`${__dirname}/galleryImages/${req.params.file}`));
 }

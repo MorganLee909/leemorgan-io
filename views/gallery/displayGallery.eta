@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Lee Morgan</title>
+        <link rel="icon" type="img/ico" href="images/favicon.ico">
+        <link rel="stylesheet" href="/gallery/gallery.css">
+    </head>
+    <body>
+        <h1><%=it.gallery.title%></h1>
+
+        <div id="tags">
+            <% for(let i = 0; i < it.gallery.tags.length; i++){ %>
+                <p><%=it.gallery.tags[i]%></p>
+            <% } %>
+        </div>
+
+        <div id="images">
+            <% for(let i = 0; i < it.gallery.images.length; i++){ %>
+                <img src="<%=it.gallery.images[i]%>" alt="Missing Image" onclick="openModal(this)">
+            <% } %>
+        </div>
+
+        <div id="modal" style="display:none">
+            <img alt="Missing Image">
+        </div>
+
+        <script>
+            let modal = document.getElementById("modal");
+
+            let openModal = (img)=>{
+                modal.style.display = "flex";
+                modal.children[0].src = img.src;
+                modal.onclick = ()=>{
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>

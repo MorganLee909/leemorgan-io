@@ -20,6 +20,7 @@ module.exports = {
         coordinates: string representing coordiantes
     }
     req.files = [images]
+    redirect: /gallery/<gallery id>
     */
     create: function(req, res){
         if(req.body.password !== process.env.SITE_PASSWORD) return res.redirect("/");
@@ -49,6 +50,25 @@ module.exports = {
         gallery.save()
             .then((gallery)=>{
                 return res.redirect(`/gallery/${gallery._id}`);
+            })
+            .catch((err)=>{
+                console.error(err);
+                return res.redirect("/");
+            });
+    },
+
+    /*
+    GET: display a single gallery
+    req.params = {
+        gallery: Gallery id
+    }
+    data = Gallery
+    render: gallery/display.eta
+    */
+    display: function(req, res){
+        Gallery.findOne({_id: req.params.gallery})
+            .then((gallery)=>{
+                return res.render("gallery/displayGallery.eta", {gallery: gallery});
             })
             .catch((err)=>{
                 console.error(err);
