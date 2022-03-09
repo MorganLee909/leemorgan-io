@@ -7,6 +7,7 @@ module.exports = (app)=>{
     app.get("/", home.landing);
     app.get("/sudoku", home.sudoku);
     app.get("/birthday", home.birthday);
+    app.get("/galleries", home.getGalleries);
 
     //BLOG
     app.get("/blog/new", blog.add);

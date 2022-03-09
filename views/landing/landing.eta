@@ -5,6 +5,7 @@
         <title>Lee Morgan</title>
         <link rel="stylesheet" href="/bundles/landing/css/landing.css">
         <link rel="icon" type="img/ico" href="images/favicon.ico">
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css">
     </head>
     <body>
         <div id="main">
@@ -87,7 +88,9 @@
         <div id="gallery" class="page" style="display:none">
             <%~ includeFile("../components/landingBackBtn.eta") %>
 
-            <h1>Gallery</h1>
+            <div id="galleryTags"></div>
+
+            <div id="map"></div>
         </div>
 
         <script src="/bundles/landing/js/landing.js"></script>
