@@ -1,9 +1,58 @@
+const Gallery = require("../models/gallery.js");
+
+const helper = require("../helper.js");
+
 module.exports = {
     /*
     GET: Display page to create new gallery
     ETA: gallery/new.eta
     */
     new: function(req, res){
-        return res.render("gallery/new.eta");
+        return res.render("gallery/newGallery.eta");
+    },
+
+    /*
+    POST: create a new
+    req.body = {
+        password: Lee Morgan's password
+        title: title of the gallery
+        tags: comma seperated strings
+        coordinates: string representing coordiantes
+    }
+    req.files = [images]
+    */
+    create: function(req, res){
+        if(req.body.password !== process.env.SITE_PASSWORD) return res.redirect("/");
+
+        let coords = req.body.coordinates.split(", ");
+        let gallery = new Gallery({
+            title: req.body.title,
+            tags: req.body.tags.split(","),
+            images: [],
+            location: {
+                type: "Point",
+                coordinates: [parseFloat(coords[0]), parseFloat(coords[1])]
+            }
+        });
+
+        let handleImage = (fileData)=>{
+            let fileString = `/galleryImages/${helper.fileId(25)}.jpg`;
+            fileData.mv(`${__dirname}/..${fileString}`);
+            gallery.images.push(fileString)
+        }
+
+        if(req.files.images.length === undefined) handleImage(req.files.images);
+        for(let i = 0; i < req.files.images.length; i++){
+            handleImage(req.files.images[i]);
+        };
+
+        gallery.save()
+            .then((gallery)=>{
+                return res.redirect(`/gallery/${gallery._id}`);
+            })
+            .catch((err)=>{
+                console.error(err);
+                return res.redirect("/");
+            });
     }
 }

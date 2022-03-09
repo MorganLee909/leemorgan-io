@@ -16,6 +16,8 @@ module.exports = (app)=>{
     //GALLERY
     app.get("/gallery/new", gallery.new);
 
+    app.post("/gallery", gallery.create);
+
     //FILES
     app.get("/thumbnails/:file", (req, res)=>res.sendFile(`${__dirname}/thumbnails/${req.params.file}`));
 }
