@@ -16,9 +16,7 @@
 
                 <button id="galleryOpen" class="smallButton">Gallery</button>
 
-                <!-- <button class="smallButton">Learn</button> -->
-
-                <!-- <button class="smallButton">Currency</button> -->
+                <button class="smallButton">Currency</button>
             </header>
 
             <div id="links">
