@@ -1,6 +1,7 @@
 const home = require("./controllers/home.js");
 const blog = require("./controllers/blog.js");
 const gallery = require("./controllers/gallery.js");
+const currency = require("./controllers/currency.js");
 
 module.exports = (app)=>{
     //HOME
@@ -19,6 +20,9 @@ module.exports = (app)=>{
     app.get("/gallery/new", gallery.new);
 
     app.post("/gallery", gallery.create);
+
+    //CURRENCY
+    app.get("/currency/new", currency.new);
 
     //FILES
     app.get("/thumbnails/:file", (req, res)=>res.sendFile(`${__dirname}/thumbnails/${req.params.file}`));
