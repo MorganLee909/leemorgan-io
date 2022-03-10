@@ -16,7 +16,7 @@
 
                 <button id="galleryOpen" class="smallButton">Gallery</button>
 
-                <button class="smallButton">Currency</button>
+                <button id="currencyOpen" class="smallButton">Currency</button>
             </header>
 
             <div id="links">
@@ -98,6 +98,14 @@
                     <img src="<%=it.blogs[i].thumbnail.link%>" alt="<%=it.blogs[i].thumbnail.name%>">
                 </a>
             <% } %>
+        </div>
+
+        <div id="currency" class="page" style="display:none">
+            <%~ includeFile("../components/landingBackBtn.eta") %>
+
+            <div id="currencyLocations"></div>
+
+            <div id="currencyContainer"></div>
         </div>
 
         <div id="gallery" class="page" style="display:none">

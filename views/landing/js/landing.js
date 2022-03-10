@@ -2,6 +2,7 @@ const mainPage = require("./mainPage.js");
 const projectsPage = require("./projects.js");
 const blogPage = require("./blog.js");
 const galleryPage = require("./gallery.js");
+const currencyPage = require("./currency.js");
 
 window.controller = {
     mainOpen: true,
@@ -26,6 +27,7 @@ window.controller = {
             case "projects": projectsPage.display(); break;
             case "blog": blogPage.display(); break;
             case "gallery": galleryPage.display(); break;
+            case "currency": currencyPage.display(); break;
         }
     }
 }

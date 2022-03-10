@@ -1,5 +1,7 @@
 const Currency = require("../models/currency.js");
 
+const helper = require("../helper.js");
+
 module.exports = {
     /*
     GET: display page to add a new currency
@@ -30,7 +32,7 @@ module.exports = {
         if(req.body.password !== process.env.SITE_PASSWORD) return res.redirect("/");
 
         let createImage = (image)=>{
-            let fileString = `/currencyimages/${createId(25)}.jpg`;
+            let fileString = `/currencyImages/${helper.fileId(25)}.jpg`;
             image.mv(`${__dirname}/..${fileString}`);
             return fileString;
         }
@@ -38,11 +40,11 @@ module.exports = {
         let currency = new Currency({
             location: req.body.location,
             type: req.body.type,
-            year: parseInt(req.body.year),
+            year: req.body.year,
             comment: req.body.comment,
             name: req.body.name,
             currencyCode: req.body.currencyCode,
-            value: parseInt(value * 100),
+            value: parseInt(req.body.value * 100),
             frontImage: createImage(req.files.frontImage),
             backImage: createImage(req.files.backImage)
         });
@@ -54,6 +56,24 @@ module.exports = {
             .catch((err)=>{
                 console.error(err);
                 return res.redirect("/");
+            });
+    },
+
+    /*
+    GET: retrieve currency data
+    req.params = {
+        location: currency location
+    }
+    response: [Currency]
+    */
+    getLocations: function(req, res){
+        Currency.find({location: req.params.location})
+            .then((currencies)=>{
+                return res.json(currencies);
+            })
+            .catch((err)=>{
+                console.error(err);
+                return res.json("ERROR: unable to retrieve currencies");
             });
     }
 }

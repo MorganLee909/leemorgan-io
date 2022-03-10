@@ -1,14 +1,17 @@
 const Blog = require("../models/blog.js");
 const Gallery = require("../models/gallery.js");
+const Currency = require("../models/currency.js");
 
 module.exports = {
     landing: function(req, res){
         let blogs = Blog.find({}, {article: 0});
+        let currency = Currency.find();
 
-        Promise.all([blogs])
+        Promise.all([blogs, currency])
             .then((response)=>{
                 return res.render("landing/landing.eta", {
-                    blogs: response[0]
+                    blogs: response[0],
+                    currency: response[1]
                 });
             })
             .catch((err)=>{

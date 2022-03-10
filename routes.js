@@ -24,8 +24,10 @@ module.exports = (app)=>{
     //CURRENCY
     app.get("/currency/new", currency.new);
     app.post("/currency", currency.create);
+    app.get("/currency/:location", currency.getLocations);
 
     //FILES
     app.get("/thumbnails/:file", (req, res)=>res.sendFile(`${__dirname}/thumbnails/${req.params.file}`));
     app.get("/galleryImages/:file", (req, res)=>res.sendFile(`${__dirname}/galleryImages/${req.params.file}`));
+    app.get("/currencyImages/:file", (req, res)=>res.sendFile(`${__dirname}/currencyImages/${req.params.file}`));
 }
