@@ -23,4 +23,7 @@ module.exports = (app)=>{
     //FILES
     app.get("/thumbnails/:file", (req, res)=>res.sendFile(`${__dirname}/thumbnails/${req.params.file}`));
     app.get("/galleryImages/:file", (req, res)=>res.sendFile(`${__dirname}/galleryImages/${req.params.file}`));
+
+    //OTHER
+    app.get("/resume", (req, res)=>res.render("other/resume.eta"));
 }
