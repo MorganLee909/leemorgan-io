@@ -12,3 +12,9 @@
 .currencyImages{
     display: flex;
 }
+
+.currencyImages img{
+    margin: 10px;
+    cursor: pointer;
+    border: 1px solid black;
+}

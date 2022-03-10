@@ -100,6 +100,14 @@
             <% } %>
         </div>
 
+        <div id="gallery" class="page" style="display:none">
+            <%~ includeFile("../components/landingBackBtn.eta") %>
+
+            <div id="galleryTags"></div>
+
+            <div id="map"></div>
+        </div>
+
         <div id="currency" class="page" style="display:none">
             <%~ includeFile("../components/landingBackBtn.eta") %>
 
@@ -123,13 +131,9 @@
             </template>
         </div>
 
-        <div id="gallery" class="page" style="display:none">
-            <%~ includeFile("../components/landingBackBtn.eta") %>
-
-            <div id="galleryTags"></div>
-
-            <div id="map"></div>
-        </div>
+        <template id="modal">
+            <div class="modal"></div>
+        </template>
 
         <script src="/bundles/landing/js/landing.js"></script>
     </body>
