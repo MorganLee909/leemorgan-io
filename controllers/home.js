@@ -5,13 +5,13 @@ const Currency = require("../models/currency.js");
 module.exports = {
     landing: function(req, res){
         let blogs = Blog.find({}, {article: 0});
-        let currency = Currency.find();
+        let currency = Currency.aggregate([{$group: {_id: "$location"}}]);
 
         Promise.all([blogs, currency])
             .then((response)=>{
                 return res.render("landing/landing.eta", {
                     blogs: response[0],
-                    currency: response[1]
+                    currencyLocations: response[1]
                 });
             })
             .catch((err)=>{

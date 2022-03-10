@@ -103,9 +103,24 @@
         <div id="currency" class="page" style="display:none">
             <%~ includeFile("../components/landingBackBtn.eta") %>
 
-            <div id="currencyLocations"></div>
+            <div id="currencyLocations">
+                <% for(let i = 0; i < it.currencyLocations.length; i++){ %>
+                    <button class="smallButton"><%=it.currencyLocations[i]._id%></button>
+                <% } %>
+            </div>
 
             <div id="currencyContainer"></div>
+
+            <template id="currencyCard">
+                <div class="currencyCard">
+                    <div class="currencyImages">
+                        <img class="currencyFront">
+                        <img class="currencyBack">
+                    </div>
+                    <p class="currencyValue"></p>
+                    <p class="currencyComment"></p>
+                </div>
+            </template>
         </div>
 
         <div id="gallery" class="page" style="display:none">

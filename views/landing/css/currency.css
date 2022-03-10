@@ -1,0 +1,14 @@
+#currency{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+#currencyLocations{
+    display: flex;
+    margin: 0 auto 35px auto;
+}
+
+.currencyImages{
+    display: flex;
+}

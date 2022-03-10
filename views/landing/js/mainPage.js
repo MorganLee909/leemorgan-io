@@ -14,15 +14,15 @@ module.exports = {
             document.getElementById("galleryOpen").onclick = ()=>{controller.changePage("gallery")};
             document.getElementById("currencyOpen").onclick = ()=>{controller.changePage("currency")};
 
-            let i = 1;
-            let skills = document.querySelectorAll(".skill");
-            setInterval(()=>{
-                for(let j = 0; j < skills.length; j++){
-                    skills[j].style.opacity = 0;
-                }
-                skills[i].style.opacity = 1;
-                i = i === skills.length - 1 ? 0 : i + 1;
-            }, 3000);
+            // let i = 1;
+            // let skills = document.querySelectorAll(".skill");
+            // setInterval(()=>{
+            //     for(let j = 0; j < skills.length; j++){
+            //         skills[j].style.opacity = 0;
+            //     }
+            //     skills[i].style.opacity = 1;
+            //     i = i === skills.length - 1 ? 0 : i + 1;
+            // }, 3000);
 
             this.populated = true;
         }
