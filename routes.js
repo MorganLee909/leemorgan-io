@@ -23,6 +23,7 @@ module.exports = (app)=>{
 
     //CURRENCY
     app.get("/currency/new", currency.new);
+    app.post("/currency", currency.create);
 
     //FILES
     app.get("/thumbnails/:file", (req, res)=>res.sendFile(`${__dirname}/thumbnails/${req.params.file}`));
